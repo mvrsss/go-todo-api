@@ -7,10 +7,9 @@ import (
 
 type Todo struct {
 	gorm.Model
-	Key         int    `gorm:"column:key"`
-	ID          int    `gorm:"column:id"json:"id"`
-	Title       string `gorm:"column:title"json:"title"`
-	Description string `gorm:"column:description"json:"description"`
+	Key         int    `gorm:"column:key" json:"key"`
+	Title       string `gorm:"column:title" json:"title"`
+	Description string `gorm:"column:description" json:"description"`
 }
 
 func (t *Todo) TableName() string {
