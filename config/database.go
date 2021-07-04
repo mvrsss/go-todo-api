@@ -1,6 +1,12 @@
 package config
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/jinzhu/gorm"
+)
+
+var DB *gorm.DB
 
 type Config struct {
 	DB *DBConfig
